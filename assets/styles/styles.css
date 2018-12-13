@@ -1,0 +1,46 @@
+body, html, ul {
+  font-family: "Open-sans", sans-serif;
+  margin: 0;
+  padding: 0; }
+
+header,
+footer {
+  position: fixed;
+  left: 0;
+  right: 0; }
+
+header {
+  top: 0; }
+
+footer {
+  height: 50px;
+  bottom: 0; }
+
+li {
+  list-style-type: none; }
+
+a {
+  text-decoration: none; }
+
+nav {
+  padding: 10px 20px; }
+  nav ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end; }
+    nav ul li {
+      padding: 20px; }
+    nav ul a {
+      font-weight: 500;
+      color: #000; }
+
+nav a::after {
+  content: '';
+  height: 2px;
+  width: 70%; }
+
+#projects-section {
+  height: 100vh; }
+
+#hero-quote {
+  margin: 20% 0 15vw 15vw; }

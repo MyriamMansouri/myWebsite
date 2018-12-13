@@ -1,0 +1,22 @@
+$nav-font-color:$secondary-dark-1;
+
+nav {
+    padding: 10px 20px;
+    ul {
+    display: flex;
+    flex-flow:row nowrap;
+    justify-content: flex-end;
+        li {
+            padding: 20px;
+        }
+        a {
+            font-weight: 500;
+            color:$nav-font-color;
+        }
+    }
+}
+nav a::after{
+    content:'';
+    height: 2px;
+    width: 70%;
+}

@@ -1,0 +1,29 @@
+body, html, ul {
+    font-family: $font-family;
+    margin: 0;
+    padding:0;
+}
+
+header,
+footer {
+    position: fixed;
+    left:0;
+    right: 0;
+}
+
+header {
+    top:0;
+}
+
+footer {
+    height:50px;
+    bottom:0;
+}
+
+li {
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}

@@ -1,7 +1,20 @@
-#projects-section {
+$hero-title:$primary-dark-1;
+$hero-sub:$secondary-dark-1;
+$hero-sub-font:$secondary-font-title;
+
+
+#welcome-section {
     height: 100vh;
 }
 
 #hero-quote{
-    margin: 20% 0 15vw 15vw;
+    padding: 15% 0 13vw 0;
+    #me{
+        color:$hero-title;
+        margin-bottom: -15px;
+    }
+    #job {
+        color:$hero-sub;
+        font-family: $hero-sub-font;
+    }
 }

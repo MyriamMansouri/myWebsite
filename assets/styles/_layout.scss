@@ -1,23 +1,51 @@
-body, html, ul {
+$h2-font-family:$secondary-font-title;
+$textarea-bg-color:$primary-dark-1;
+$form-focus-border-color:$primary-dark-1;
+
+body, html, ul, textarea {
     font-family: $font-family;
     margin: 0;
     padding:0;
 }
 
+section {
+    box-sizing: border-box;
+    padding:10vw 15vw 15vw 15vw;
+}
+
+h1 {
+    line-height: 4.7rem;
+    font-size: 5rem;
+}
+
+h2{
+    font-size:2.7rem;
+    font-family: $h2-font-family;
+}
+
+h1,
+h2{
+    font-weight: bold;
+}
+
+h1,
+h2,
+p {
+    margin:0;
+}
 header,
 footer {
-    position: fixed;
     left:0;
     right: 0;
 }
 
 header {
+    position: fixed;
     top:0;
 }
 
 footer {
     height:50px;
-    bottom:0;
 }
 
 li {
@@ -27,3 +55,41 @@ li {
 a{
     text-decoration: none;
 }
+
+button {
+    border:none;
+}
+
+input, 
+textarea,
+textarea:focus{
+    border:none;
+    width: 100%;
+    display: block;
+    font-style: italic;
+    outline: none;
+    box-sizing: border-box;
+}
+
+
+textarea{
+    padding: 10px;
+    margin: 20px 0;
+    text-align: left;
+    border:2px solid;
+    height: 40vh;
+    &:focus {
+        border:2px solid $form-focus-border-color;
+    }
+
+    
+}
+input {
+    padding: 5px 10px;
+    margin:5px 0 ;
+    border-bottom:2px solid;
+    &:focus {
+        border-bottom:2px solid  $form-focus-border-color;
+    }
+}
+

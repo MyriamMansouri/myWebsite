@@ -1,0 +1,27 @@
+
+$textarea-bg-color:$primary-dark-1;
+
+
+
+#contact-section {
+    h1,h2 {
+        margin-bottom: 20px;
+        }
+}
+
+#contact-intro {
+    padding-bottom: 35px;
+}
+#contact-form {
+    padding: 0;
+    input, textarea {
+        font-size:1.2rem;
+        line-height: 1.5rem;
+    }
+    button input{
+        margin: 0;
+        
+    }
+
+    
+}

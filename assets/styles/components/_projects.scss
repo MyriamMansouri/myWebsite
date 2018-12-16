@@ -1,0 +1,92 @@
+$tile-font-color:$primary-light-1;
+$layer-color:$primary-dark-1;
+$key-word-color:$primary-light-1;
+
+#projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2em;
+}
+.project-tile {
+        overflow: hidden;
+}
+        .project {
+            position: relative;
+            height: 370px;
+            background-size: cover;
+            .project-key-word {
+                font-weight: bold;
+                color: transparent;
+                position: absolute;
+                top:-67px;
+                right: -20px;
+                transition: $hover-transition;
+            }
+            .project-text-wrapper{
+                position: absolute;
+                bottom:0;
+                padding:10% 20% 10% 10%;
+                .project-text {
+                    h2{
+                        line-height: 2.4rem;
+                        letter-spacing: 1px;
+                    }
+                    p {
+                        letter-spacing: 1px;
+                        padding: 13px 0 19px 0;
+                    }
+                }
+                .project-tags{
+                    line-height: 1.3em;
+                }
+                .project-tags span{
+                    padding:1px 5px;
+                    border: solid 1px;
+                    border-radius: 2px;
+                    font-size: 0.8em;
+                    white-space:nowrap;
+                }
+
+                .project-text, 
+                .project-tags {
+                    padding:0;
+                }
+
+            }
+        }
+        
+        a{
+            color: $tile-font-color;
+        }
+
+
+
+.layer{
+    height: inherit;
+    opacity:0;
+    background-color:$layer-color;
+    transform: translate(-100%,0%);
+    transition: $hover-transition;
+}
+.project:hover{
+ .layer {
+    opacity:0.6;
+    transform: translate(0%,0%);
+ }
+    .project-text-wrapper {
+        display:none;
+    }
+    .project-key-word{
+        color:$key-word-color;
+        font-size: 200px;
+    }
+    
+}
+
+@media (max-width:750px) {
+    #projects-section {
+        #projects-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+}

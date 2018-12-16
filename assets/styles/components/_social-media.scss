@@ -1,0 +1,21 @@
+$social-media-color:$secondary-dark-1;
+$social-media-hover:$primary-dark-1;
+
+#social-media{
+    position: fixed;
+    right: 0;
+    top:43vh;
+    li {
+        padding: 10px 30px;
+    }
+    a {
+        display: inline-block;
+        font-size:1.5em;
+        color:$social-media-color;
+        transition: $hover-transition;
+    }
+    a:hover {
+        color:$social-media-hover;
+        transform: translateY(3px);
+    }
+}

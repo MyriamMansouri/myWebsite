@@ -1,22 +1,44 @@
+@import "_color-theme-btn";
+
 $nav-font-color:$secondary-dark-1;
+$nav-hover-effect:$primary-dark-1;
 
 nav {
     padding: 10px 20px;
+    line-height: 1.5em;
     ul {
     display: flex;
     flex-flow:row nowrap;
     justify-content: flex-end;
         li {
             padding: 20px;
+            color:$nav-font-color;
+            font-weight: 500;
         }
         a {
-            font-weight: 500;
-            color:$nav-font-color;
+            letter-spacing: 2px;
+            font-weight: inherit;
+            color:inherit;
+            transition: $hover-transition;
         }
     }
 }
-nav a::after{
-    content:'';
-    height: 2px;
-    width: 70%;
+nav li::after{
+    content: '';
+    display: block;
+    bottom: 20px;
+    height: 4px;
+    width: 0%;
+    background-color: $primary-dark-1;
+    transition: $hover-transition;
 }
+
+nav li:hover::after{
+    width:70%;
+}
+nav li:hover{
+   color:$primary-dark-1;
+}
+nav li:hover{
+    font-weight: bold;
+ }

@@ -1,0 +1,9 @@
+$color-btn-bg : $primary-dark-2;
+
+#color-theme-btn{
+    cursor:pointer;
+    width:20px;
+    height:20px;
+    background-color: $color-btn-bg ;
+    border-radius: 100%;
+}

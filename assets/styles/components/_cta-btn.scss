@@ -1,0 +1,62 @@
+$main-hover-color :$primary-dark-1;
+$secondary-hover-color :$secondary-light-1;
+
+.cta-btn {
+    >* {
+        display: inline-block;
+    }
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: baseline;
+    padding: 0;
+    outline: none;
+    background-color: transparent;
+    .cta-btn-content-wrapper{
+        padding: 10px 20px;
+        border: solid 2px;
+        box-sizing: border-box;
+        overflow: hidden;
+        position: relative;
+        height: 100%;
+        &::after {
+            content:"";
+            position: absolute;
+            top:0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background-color: $secondary-hover-color;
+            transition: all 0.45s ease;
+            z-index: -1;
+        }
+        &::before {
+            content:"";
+            position: absolute;
+            top:0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background-color: $main-hover-color;
+            opacity: 0.7;
+            transition: $hover-transition;
+            z-index: -1;
+        }
+        &:hover::after {
+            width:100%;
+            left:100%;
+        }
+        &:hover::before {
+            width:100%;
+        }
+}
+    .fas.fa-heart{
+        transition: $hover-transition;
+    }
+    &:hover{
+        .fas.fa-heart {
+            transform: translateX(20px);
+        }
+    }
+
+}
+

@@ -61,35 +61,21 @@ button {
 }
 
 input, 
-textarea,
-textarea:focus{
+textarea {
     border:none;
     width: 100%;
     display: block;
-    font-style: italic;
     outline: none;
     box-sizing: border-box;
-}
-
-
-textarea{
-    padding: 10px;
-    margin: 20px 0;
-    text-align: left;
     border:2px solid;
-    height: 40vh;
+    margin: 20px 0;
+    padding: 10px;
+    text-align: left;
     &:focus {
         border:2px solid $form-focus-border-color;
     }
-
-    
-}
-input {
-    padding: 5px 10px;
-    margin:5px 0 ;
-    border-bottom:2px solid;
-    &:focus {
-        border-bottom:2px solid  $form-focus-border-color;
-    }
 }
 
+textarea{
+    height: 40vh;
+}

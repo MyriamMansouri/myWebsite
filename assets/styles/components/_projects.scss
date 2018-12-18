@@ -5,10 +5,10 @@ $key-word-color:$primary-light-1;
 #projects-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 2em;
+    grid-gap: 4em;
 }
 .project-tile {
-        overflow: hidden;
+    overflow: hidden;
 }
         .project {
             position: relative;

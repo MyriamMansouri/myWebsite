@@ -3,9 +3,13 @@
 $nav-font-color:$secondary-dark-1;
 $nav-hover-effect:$primary-dark-1;
 
+header {
+    z-index: 2;
+}
 nav {
     padding: 10px 20px;
     line-height: 1.5em;
+    z-index: 2;
     ul {
     display: flex;
     flex-flow:row nowrap;

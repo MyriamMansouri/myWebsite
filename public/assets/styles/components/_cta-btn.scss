@@ -49,11 +49,11 @@ $secondary-hover-color :$secondary-light-1;
             width:100%;
         }
 }
-    .fas.fa-heart{
+    .fas.fa-long-arrow-alt-right{
         transition: $hover-transition;
     }
     &:hover{
-        .fas.fa-heart {
+        .fas.fa-long-arrow-alt-right {
             transform: translateX(20px);
         }
     }

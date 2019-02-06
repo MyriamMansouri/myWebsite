@@ -17,12 +17,12 @@ app.use(express.static(path.join(__dirname, '/public')));
 hbs.registerPartials(__dirname + '/views/partials');
 app.set('view engine', 'hbs');
 
-console.log(process.env.NODE_ENV);
+// console.log(process.env.NODE_ENV);
 
 app.use((req, res, next) => {
   var now = new Date().toString();
   var log = `${now}:${req.method} ${req.url}`;
-  console.log(log);
+  // console.log(log);
   next();
 });
 
@@ -39,7 +39,7 @@ app.post('/', [
   check('email').isEmail().normalizeEmail(),
   check('message').isLength({ max: 10^4 }).trim().escape()
   ],function (req, res) {
-    console.log(req.body.message);
+    // console.log(req.body.message);
 
       let mailOpts, smtpTrans;
       smtpTrans = nodemailer.createTransport({
@@ -59,15 +59,15 @@ app.post('/', [
       };
       // TODO Message to user to confirm email was sent
       smtpTrans.sendMail(mailOpts, function (err, info) {
-        if (err) {
-          console.log('Error');
-        } else {
-          console.log('Email sent.')
-        }
+        // if (err) {
+        //   console.log('Error');
+        // } else {
+        //   console.log('Email sent.')
+        // }
       });
     res.render('index.hbs');
   });
 
 app.listen(port, () => {
-    console.log('Server is up and running on port 3000');
+    // console.log('Server is up and running on port 3000');
 });

@@ -13,7 +13,7 @@ app.use(helmet());
 
 const port = process.env.PORT || 3000;
 
-app.use(express.static(path.join(__dirname, '/public')));
+app.use(express.static(path.join(__dirname, '/public')));gitgit
 hbs.registerPartials(__dirname + '/views/partials');
 app.set('view engine', 'hbs');
 

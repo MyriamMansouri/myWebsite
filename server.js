@@ -17,7 +17,7 @@ app.use(express.static(path.join(__dirname, '/public')));
 hbs.registerPartials(__dirname + '/views/partials');
 app.set('view engine', 'hbs');
 
-// console.log(process.env.NODE_ENV);
+console.log(process.env.NODE_ENV);
 
 app.use((req, res, next) => {
   var now = new Date().toString();
@@ -59,15 +59,15 @@ app.post('/', [
       };
       // TODO Message to user to confirm email was sent
       smtpTrans.sendMail(mailOpts, function (err, info) {
-        // if (err) {
-        //   console.log('Error');
-        // } else {
-        //   console.log('Email sent.')
-        // }
+        if (err) {
+          console.log('Error:', err, info);
+        } else {
+          console.log('Email sent.')
+        }
       });
     res.render('index.hbs');
   });
 
 app.listen(port, () => {
-    // console.log('Server is up and running on port 3000');
+    console.log('Server is up and running on port 3000');
 });

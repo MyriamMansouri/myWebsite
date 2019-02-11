@@ -12,6 +12,7 @@ var app = express();
 app.use(helmet());
 
 const port = process.env.PORT || 3000;
+console.log(port);
 
 app.use(express.static(path.join(__dirname, '/public')));
 hbs.registerPartials(__dirname + '/views/partials');
@@ -44,8 +45,8 @@ app.post('/', [
       let mailOpts, smtpTrans;
       smtpTrans = nodemailer.createTransport({
         host: 'smtp.gmail.com',
-        port: 465,
-        secure: true,
+        port: 587,
+        secure: false,
         auth: {
           user: process.env.GMAIL_USER,
           pass: process.env.GMAIL_PASS
@@ -60,7 +61,7 @@ app.post('/', [
       // TODO Message to user to confirm email was sent
       smtpTrans.sendMail(mailOpts, function (err, info) {
         if (err) {
-          console.log('Error:', err, info);
+          console.log('Error:', err);
         } else {
           console.log('Email sent.')
         }

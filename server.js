@@ -23,7 +23,7 @@ console.log(process.env.NODE_ENV);
 app.use((req, res, next) => {
   var now = new Date().toString();
   var log = `${now}:${req.method} ${req.url}`;
-  // console.log(log);
+  console.log(log);
   next();
 });
 
@@ -70,5 +70,5 @@ app.post('/', [
   });
 
 app.listen(port, () => {
-    console.log('Server is up and running on port 3000');
+    console.log(`Server is up and running on port ${port}`);
 });
